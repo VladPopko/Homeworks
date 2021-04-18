@@ -42,9 +42,26 @@ let methodsForList = {
         toDoList[index]['flag'] = flag;
       }
     },
-    viewList : function() {
-          console.log('asdas');
-        },
+    viewList : function(name,text,flag) {
+
+      let valueTrue = 0,
+          valueFalse = 0;
+
+      for (el of toDoList){
+        console.log(typeof el['flag']);
+          if (el['flag'] == 'true'){
+            valueTrue++;
+        } else valueFalse++;
+      }
+
+      let values = {
+        all : valueTrue+valueFalse,
+        completed : valueTrue,
+        uncompleted : valueFalse,
+
+      }
+      console.log(values);
+    },
 
 }
 
@@ -56,10 +73,10 @@ let toDoList = [
   },
 ];
 
-// methodsForList.addNewTask('Первое дело','Создано для теста','false');
-// methodsForList.addNewTask('Имя','Текст','true');
-// methodsForList.addNewTask('Имя','Текст','true');
-// console.log(toDoList);
+methodsForList.addNewTask('Первое дело','Создано для теста','false');
+methodsForList.addNewTask('Имя','Текст','true');
+methodsForList.addNewTask('Имя','Текст','true');
+console.log(toDoList);
 
 // methodsForList.addNewTask('Имя','Текст','true');
 // methodsForList.deleteTask('Имя');
@@ -69,3 +86,5 @@ let toDoList = [
 
 // methodsForList.editTask('Первое дело','Создано для проверки изменения','true');
 // console.log(toDoList);
+
+methodsForList.viewList();
