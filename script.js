@@ -12,9 +12,20 @@ let methodsForList = {
           toDoList.push({'name':name,'text':text,'flag':flag});
         }
       },
-  deleteTask : function() {
-        console.log('asdas');
-      },
+  deleteTask : function(name) {
+
+    let index = 0;
+
+    for (el of toDoList){
+        if (el['name'] === name){
+          break;
+      }
+      index++;
+    }
+    if (index < toDoList.length){
+      toDoList.splice(index, 1);
+    }
+  },
   editTask : function() {
         console.log('asdas');
       },
@@ -23,6 +34,7 @@ let methodsForList = {
       },
 
 }
+
 let toDoList = [
   {
     name : 'Первое дело',
@@ -35,3 +47,8 @@ let toDoList = [
 // methodsForList.addNewTask('Имя','Текст','true');
 // methodsForList.addNewTask('Имя','Текст','true');
 // console.log(toDoList);
+
+methodsForList.addNewTask('Имя','Текст','true');
+methodsForList.deleteTask('Имя');
+methodsForList.deleteTask('Первое дело');
+console.log(toDoList);
