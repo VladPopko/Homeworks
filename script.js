@@ -1,5 +1,5 @@
 let methodsForList = {
-      addNewTask : function(name,text,flag) {
+    addNewTask : function(name,text,flag) {
 
         let exist = 0;
 
@@ -12,26 +12,39 @@ let methodsForList = {
           toDoList.push({'name':name,'text':text,'flag':flag});
         }
       },
-  deleteTask : function(name) {
+    deleteTask : function(name) {
 
-    let index = 0;
+      let index = 0;
 
-    for (el of toDoList){
-        if (el['name'] === name){
-          break;
+      for (el of toDoList){
+          if (el['name'] === name){
+            break;
+        }
+        index++;
       }
-      index++;
-    }
-    if (index < toDoList.length){
-      toDoList.splice(index, 1);
-    }
-  },
-  editTask : function() {
-        console.log('asdas');
-      },
-  viewList : function() {
-        console.log('asdas');
-      },
+      if (index < toDoList.length){
+        toDoList.splice(index, 1);
+      }
+    },
+    editTask : function(name,text,flag) {
+
+      let index = 0;
+
+      for (el of toDoList){
+          if (el['name'] === name){
+            break;
+        }
+        index++;
+      }
+      if (index < toDoList.length){
+        toDoList[index]['name'] = name;
+        toDoList[index]['text'] = text;
+        toDoList[index]['flag'] = flag;
+      }
+    },
+    viewList : function() {
+          console.log('asdas');
+        },
 
 }
 
@@ -48,7 +61,11 @@ let toDoList = [
 // methodsForList.addNewTask('Имя','Текст','true');
 // console.log(toDoList);
 
-methodsForList.addNewTask('Имя','Текст','true');
-methodsForList.deleteTask('Имя');
-methodsForList.deleteTask('Первое дело');
-console.log(toDoList);
+// methodsForList.addNewTask('Имя','Текст','true');
+// methodsForList.deleteTask('Имя');
+// methodsForList.deleteTask('Первое дело');
+// console.log(toDoList);
+
+
+// methodsForList.editTask('Первое дело','Создано для проверки изменения','true');
+// console.log(toDoList);
