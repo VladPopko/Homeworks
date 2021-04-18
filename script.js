@@ -73,10 +73,10 @@ let toDoList = [
   },
 ];
 
-methodsForList.addNewTask('Первое дело','Создано для теста','false');
-methodsForList.addNewTask('Имя','Текст','true');
-methodsForList.addNewTask('Имя','Текст','true');
-console.log(toDoList);
+// methodsForList.addNewTask('Первое дело','Создано для теста','false');
+// methodsForList.addNewTask('Имя','Текст','true');
+// methodsForList.addNewTask('Имя','Текст','true');
+// console.log(toDoList);
 
 // methodsForList.addNewTask('Имя','Текст','true');
 // methodsForList.deleteTask('Имя');
@@ -87,4 +87,4 @@ console.log(toDoList);
 // methodsForList.editTask('Первое дело','Создано для проверки изменения','true');
 // console.log(toDoList);
 
-methodsForList.viewList();
+// methodsForList.viewList();
