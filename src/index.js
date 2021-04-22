@@ -13,24 +13,26 @@ function sumFunction (){
 }
 
 const sum = sumFunction();
-sum('3');
-sum('5');
-sum('20');
+const sumNumber = 3;
 
-function createCounter(counter = '0' , value = '1') {
-    const defaultValue = counter;
-    let calc = 0;
+sum(sumNumber);
+
+const counterNumber = 0;
+const valueNumber = 0;
+
+function createCounter(counter = counterNumber , value = valueNumber) {
+    let calc = counter;
     this.standartValue = function() {
-        calc += +counter + +defaultValue;
+        calc = counter;
         return calc;
     };
 
     this.count = function(){
-        calc += +counter + +value;
+        calc += value;
         return calc;
     };
 }
-const fblikes = new createCounter('5' , '2');
+const fblikes = new createCounter();
 
 fblikes.count();
 fblikes.count();
