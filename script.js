@@ -1,71 +1,43 @@
-let methodsForList = {
-    addNewTask : function(name,text,flag) {
+const methodsForList = {
+    addNewTask(name,text,flag) {
 
-        let exist = 0;
+      const index = toDoList.map (el => el['name'])
+      .indexOf(name);
 
-        for (el of toDoList){
-            if (el['name'] === name){
-              exist = 1;
-          }
-        }
-        if (exist === 0){
+        if (index === -1){
           toDoList.push({'name':name,'text':text,'flag':flag});
         }
       },
-    deleteTask : function(name) {
+    deleteTask(name) {
 
-      let index = 0;
+      const index = toDoList.map (el => el['name'])
+      .indexOf(name);
 
-      for (el of toDoList){
-          if (el['name'] === name){
-            break;
-        }
-        index++;
-      }
-      if (index < toDoList.length){
-        toDoList.splice(index, 1);
-      }
+      toDoList.splice(index, 1);
     },
-    editTask : function(name,text,flag) {
+    editTask(name,text,flag) {
 
-      let index = 0;
+      const newArray = toDoList.map (el => el)
+      .filter (el => el['name'] === name);
 
-      for (el of toDoList){
-          if (el['name'] === name){
-            break;
-        }
-        index++;
-      }
-      if (index < toDoList.length){
-        toDoList[index]['name'] = name;
-        toDoList[index]['text'] = text;
-        toDoList[index]['flag'] = flag;
-      }
+      newArray.map(el => el['text'] = text, el['flag'] = flag);
     },
-    viewList : function(name,text,flag) {
+    viewList(name,text,flag) {
 
-      let valueTrue = 0,
-          valueFalse = 0;
+      const newArray = toDoList.map(el => el)
+      .filter(el => el['flag'] === 'true');
 
-      for (el of toDoList){
-        console.log(typeof el['flag']);
-          if (el['flag'] == 'true'){
-            valueTrue++;
-        } else valueFalse++;
-      }
-
-      let values = {
-        all : valueTrue+valueFalse,
-        completed : valueTrue,
-        uncompleted : valueFalse,
+      const values = {
+        all : toDoList.length,
+        completed : newArray.length,
+        uncompleted : toDoList.length - newArray.length,
 
       }
-      console.log(values);
     },
 
 }
 
-let toDoList = [
+const toDoList = [
   {
     name : 'Первое дело',
     text : 'Создано для теста',
@@ -76,15 +48,14 @@ let toDoList = [
 // methodsForList.addNewTask('Первое дело','Создано для теста','false');
 // methodsForList.addNewTask('Имя','Текст','true');
 // methodsForList.addNewTask('Имя','Текст','true');
-// console.log(toDoList);
 
 // methodsForList.addNewTask('Имя','Текст','true');
-// methodsForList.deleteTask('Имя');
+// methodsForList.addNewTask('Имя2','Текст','true');
+// methodsForList.addNewTask('Имя3','Текст','true');
 // methodsForList.deleteTask('Первое дело');
-// console.log(toDoList);
+// methodsForList.deleteTask('Имя2','Текст','true');
 
 
 // methodsForList.editTask('Первое дело','Создано для проверки изменения','true');
-// console.log(toDoList);
 
 // methodsForList.viewList();
