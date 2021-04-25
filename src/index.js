@@ -1,3 +1,5 @@
+// FIRST TASK
+
 function sumFunction (){
 
     let valueForSum = 0;
@@ -17,28 +19,36 @@ const sumNumber = 3;
 
 sum(sumNumber);
 
-const counterNumber = 0;
-const valueNumber = 1;
 
-function createCounter(counter = counterNumber , value = valueNumber) {
-    let calc = counter;
-    this.standartValue = function() {
-        calc = counter;
-        return calc;
-    };
+// SECOND TASK
 
-    this.count = function(){
-        calc += value;
-        return calc;
+const defaultValue = 0;
+const valueToUp = 1;
+
+function createCounter(
+    defaultValueFunction = defaultValue,
+    valueToUpFunction = valueToUp) {
+
+    let value = defaultValueFunction;
+
+    return {
+        standartValue () {
+            value = defaultValueFunction;
+            return value;
+        },
+        count () {
+            value += valueToUpFunction;
+            return value;
+        },
     };
 }
-const fblikes = new createCounter();
 
+const fblikes = createCounter();
 fblikes.count();
 fblikes.count();
 fblikes.standartValue();
 
-const instalikes = new createCounter();
+const instalikes = createCounter();
 
 instalikes.count();
 instalikes.count();
