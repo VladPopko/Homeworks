@@ -4,7 +4,6 @@ function customBindCall(func,object,...argsOut){
         const newFunc = func.call(object,...args);
 
         return newFunc;
-
     };
 }
 
@@ -14,7 +13,6 @@ function customBindApply(func,object,...argsOut){
         const newFunc = func.apply(object,args);
 
         return newFunc;
-
     };
 }
 
