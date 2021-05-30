@@ -10,9 +10,22 @@
     <article class="wrapper">
         <!-- FIRST TASK -->
 
-        <div class="box shadow radius border"></div>
+        <!-- <div class="box shadow radius border"></div> -->
 
-       
+       <!-- SECOND TASK -->
+
+       <form id="reg-form" action="">
+        <input type="text" data-target="name" placeholder="Name">
+        <input type="email" data-target="email" placeholder="Email">
+        <input type="text" data-target="city" placeholder="City">
+        <select data-target="gender">
+          <option value="0"  selected>Gender</option>
+          <option value="1">Male</option>
+          <option value="2">Female</option>
+        </select>
+        <input type="checkbox" data-target="terms" value="true"> Terms and conditions
+        <button type="submit">Send</button>
+      </form>
 
     </article>
     <script src="index.js"></script>
