@@ -50,4 +50,23 @@
 // }
 
 
+const $wrapper = document.querySelector('.wrapper');
+const zero = 0;
+let counter = 0;
+const ten = 10;
+
+$wrapper.append(document.createElement('table'));
+
+const $table = $wrapper.children[zero];
+
+for(let i = 0; i < ten; i++){
+    $table.append(document.createElement('tr'));
+    for(let j = 0; j < ten; j++){
+        const $tr = $table.children[i];
+        $tr.append(document.createElement('td'));
+        $tr.children[j].innerText = counter++;
+        $tr.children[j].style.border = '1px solid';
+    }
+}
+
 
