@@ -28,27 +28,6 @@
 
 // Second task
 
-// const $wrapper = document.querySelector('.wrapper');
-
-// const number = 10;
-// let counter = 1;
-// $wrapper.innerHTML = '<table><tbody></tbody></table>';
-// const $tbody = document.querySelector('tbody');
-// const $table = document.querySelector('table');
-
-// $table.style.textAlign = 'center';
-
-// for (let i = 1; i <= number; i++){
-//     $tbody.innerHTML += '<tr></tr>';
-// }
-// const $tr = document.querySelectorAll('tr');
-
-// for (let i = 0; i < number; i++){
-//     for (let j = 0;j < number; j++){
-//         $tr[i].innerHTML += `<td style="border: 1px solid black;">${counter++}</td>`;
-//     }
-// }
-
 
 const $wrapper = document.querySelector('.wrapper');
 const zero = 0;
