@@ -28,7 +28,7 @@ $submit.addEventListener('click',(e) => {
 
     document.querySelectorAll('.title > span').forEach(span => {
         span.addEventListener('click',(event) => {
-            for (const el of span.parentElement.children){
+            for (const el of $title.children){
                 el.classList.remove('is-active');
             }
             for (const el of $content.children){
