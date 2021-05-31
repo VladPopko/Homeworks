@@ -5,11 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Homework-15</title>
+    <style>
+      .wrapper{
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      .title{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 200px;
+        margin-top: 5px;
+      }
+      .form-control{
+        width: 100%;
+      }
+      .title > span{
+        border: 1px solid;
+        height: 30px;
+        padding: 5px 10px;
+      }
+      .title > span + span{
+       margin-left: 5px;
+      }
+      .is-active{
+        background-color: green;
+        font-weight: bold;
+      }
+      .is-hidden{
+        display: none;
+      }
+    </style>
 </head>
 <body>
     <article class="wrapper">
-       
-
+       <form id="form">
+         <input class="form-control" name="title" type="text">
+         <textarea class="form-control" name="content"></textarea>
+         <button type="submit">Add</button>
+       </form>
+       <div class="title">
+       </div>
+       <div class="content"></div>
     </article>
     <script src="index.js"></script>
 </body>
