@@ -6,13 +6,120 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Homework-17</title>
     <style>
-      
+        .wrapper{
+            margin: 0 auto;
+            width: 600px;
+        }
+        .square-area{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+        }
+      .square-item{
+          border: 1px solid;
+          padding: 20px 10px;
+      }
+      .square-item__text{
+          display: block;
+          text-align: center;
+      }
+      .color-red{
+          background-color: red;
+      }
+      .color-green{
+          background-color: green;
+      }
+      .title{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 200px;
+        margin-top: 5px;
+      }
+      .form-control{
+        width: 100%;
+      }
+      .title > span{
+        border: 1px solid;
+        height: 30px;
+        padding: 5px 10px;
+      }
+      .title > span + span{
+       margin-left: 5px;
+      }
+      .is-active{
+        background-color: green;
+        font-weight: bold;
+      }
+      .is-hidden{
+        display: none;
+      }
     </style>
 </head>
 <body>
     <article class="wrapper">
-      
+      <!-- FIRST TASK -->
+      <!-- <section class="square-area">
+          <div class="square-item">
+            <span class="square-item__text">
+                0
+            </span>
+            <button type="button" class="square-item__minus">-</button>
+            <button type="button" class="square-item__plus">+</button>
+          </div>
+          <div class="square-item">
+            <span class="square-item__text">
+                0
+            </span>
+            <button type="button" class="square-item__minus">-</button>
+            <button type="button" class="square-item__plus">+</button>
+          </div>
+          <div class="square-item">
+            <span class="square-item__text">
+                0
+            </span>
+            <button type="button" class="square-item__minus">-</button>
+            <button type="button" class="square-item__plus">+</button>
+          </div>
+          <div class="square-item">
+            <span class="square-item__text">
+                0
+            </span>
+            <button type="button" class="square-item__minus">-</button>
+            <button type="button" class="square-item__plus">+</button>
+          </div>
+          <div class="square-item">
+            <span class="square-item__text">
+                0
+            </span>
+            <button type="button" class="square-item__minus">-</button>
+            <button type="button" class="square-item__plus">+</button>
+          </div>
+        </section>   -->
+         
+          <!-- SECOND TASK -->
+        <!-- <section class="square-area">
+            <div class="square-item color-red">1</div>
+            <div class="square-item color-red">2</div>
+            <div class="square-item color-red">3</div>
+            <div class="square-item color-red">4</div>
+            <div class="square-item color-red">5</div>
+            <div class="square-item color-red">6</div>
+        </section> -->
+
+        <!-- THIRD TASK -->
+
+        <form id="form">
+            <input class="form-control" name="title" type="text">
+            <textarea class="form-control" name="content"></textarea>
+            <button type="submit">Add</button>
+          </form>
+          <div class="title">
+          </div>
+          <div class="content"></div>
     </article>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
